@@ -1,46 +1,34 @@
 
+# OWASP ZAP Web Application Vulnerability Scan
 
-# DVWA Web Application Security Scan – OWASP ZAP
-
-## Overview
-
-This project documents a full web application vulnerability assessment conducted on **Damn Vulnerable Web Application (DVWA)** using **OWASP ZAP**.
-
-## Objectives
-
-* Perform passive and active scanning using OWASP ZAP
-* Identify common OWASP Top 10 vulnerabilities
-* Document findings and remediation strategies
+## Objective
+To perform a full vulnerability assessment of a web application using OWASP ZAP and document findings and remediation steps.
 
 ## Tools Used
-
 * DVWA (Localhost)
 * OWASP ZAP
-* Web Browser
-
+* Kali Linux
 
 ## Methodology
-
-1. Proxy DVWA traffic through OWASP ZAP
-2. Crawl application using Spider
-3. Perform Active Scan
-4. Analyze alerts and risks
-5. Document vulnerabilities and remediation
+- Automated Scan
+- Crawl application using Spider
+- Passive and Active Scanning
+- Analyze alerts and risks
 
 ## Key Findings
-
-* Remote Code Execution - CVE-2012-1823
-* Source Code Disclosure - CVE-2012-1823
-* Absence of Anti-CSRF Tokens
-* Content Security Policy (CSP) Header Not Set
-* Directory Browsing
+| Risk Level | Vulnerability |
+|----------|---------------|
+| High | SQL Injection |
+| Medium | Cross-Site Scripting (XSS) |
+| Low | Missing Security Headers |
+| Info | Cookie Security Flags |
 
 ## Remediation Summary
+- Implement input validation
+- Use parameterized queries
+- Add HTTP security headers
+- Harden session management
 
-* Prepared SQL statements
-* Input validation and output encoding
-*  Principle of least privilege
-* CSRF tokens
-* Secure HTTP headers
-
+## Lessons Learned
+This exercise improved my understanding of automated vulnerability scanning, interpreting scan results, and mapping findings to real-world security controls.
 
